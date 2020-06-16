@@ -1,0 +1,23 @@
+tell application "Contacts"
+	--activate
+	set totalNum to count person
+	--set totalNum to 1
+	repeat with i from 1 to totalNum
+		--get last name of person i
+		--get first name of person i
+		--get phonetic last name of person i
+		set lastN to last name of person i
+		if phonetic last name of person i is missing value then
+			if lastN is missing value then
+				
+				set lastN to first name of person i
+				set last name of person i to lastN
+			end if
+			
+			set plastN to do shell script "/usr/local/bin/pypinyin " & lastN
+			--do shell script "echo $PATH"
+			set phonetic last name of person i to plastN
+		end if
+	end repeat
+	save
+end tell
