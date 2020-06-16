@@ -16,7 +16,7 @@ tell application "Contacts"
 			end if
 			
 			set plastN to do shell script "/usr/local/bin/pypinyin " & lastN
---pypinyin from python pin installation
+--pypinyin  from python pin installation
 			--do shell script "echo $PATH"
 			set phonetic last name of person i to plastN
 		end if
