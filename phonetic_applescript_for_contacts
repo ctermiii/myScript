@@ -1,3 +1,4 @@
+--reference to https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html
 tell application "Contacts"
 	--activate
 	set totalNum to count person
